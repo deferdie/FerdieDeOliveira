@@ -107,8 +107,21 @@
 
         <script type="text/javascript" src="js/index.js"></script>
 
-        <script type="text/javascript">
+            <script type="text/javascript">
            
+            $('#login-form').submit(function(event) {
+                var formData = $('#login-form').serialize();
+                $.post('https://flagfitness.co.uk/api/login', formData, function(data) {
+                    if (data == 'false'){
+                        alert(data);
+                    }
+                    else
+                    {
+                        document.location.href = "#second-page";
+                    }
+                });
+            });
+
             $('#due-page').click(function() {
                $.get('https://flagfitness.co.uk/api/hi', function(data) {
                     alert(data);
