@@ -105,3 +105,29 @@ margin: .8em 30% .8em;
 .ui-icon-ms-search {
     background: url("../img/search-icon.png") 50% 50% no-repeat;
 }
+
+.text-center
+{
+    text-align: center !important;
+}
+
+.social
+{
+    text-align: center !important;
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.social-buttons
+{
+    display: none;
+}
+
+.nice-border
+{
+    border-radius: 5px;
+    border: 1px solid #000;
+}
