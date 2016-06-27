@@ -131,3 +131,8 @@ margin: .8em 30% .8em;
     border-radius: 5px;
     border: 1px solid #000;
 }
+
+.projects  a
+{
+    text-decoration: none !important;
+}
