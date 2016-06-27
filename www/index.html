@@ -18,39 +18,21 @@
                             <img src="img/logo.png" id="logo"  />
                         </div>
                     <div id="menu">
-                        <form  id="login-form">
-                            <input type="email" name="email">
-                            <input type="password" name="password">
-                            <button type="submit" role="button" data-icon="flat-time" data-theme="f" class="btn btn-default">button</button>
-                        </form>
-                        <a data-icon="flat-heart" data-theme="d" href="#second-page" data-role="button">Second Page</a>
-                        <a data-icon="flat-time" data-theme="f" href="#due-page" id="due-page"  data-role="button">Fake asdasdBtn</a>
+                        <a data-icon="flat-heart" data-theme="d" href="#second-page" data-role="button">MY PROJECTS</a>
+                        <a data-icon="flat-time" data-theme="f" href="#about-page" id="due-page"  data-role="button">ABOUT ME</a>
                         <fieldset class="ui-grid-a">
-                            <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
                             <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
                         </fieldset>
-
-
                     </div>
                 </div>
             </div><!-- /page  -->
 
             <div  id="second-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
-                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>Dashboard</h1>
+                    <h1>My Projects</h1>
                 </div>
                 <div data-role="content" >
-                    <p>Dashboard content can go here</p>
-                </div>
-                <div id="footer" data-role="footer" data-id="footer1" data-position="fixed" data-tap-toggle="false">
-                    <div id="navbar" data-role="navbar">
-                        <ul>
-                            <li><a id="map-button" href="#second-page" data-icon="flat-location" data-theme="b">Map</a></li>
-                            <li><a id="list-button" href="#list-page" data-icon="flat-menu">List</a></li>
-                            <li><a id="search-button" href="#search-page" data-icon="ms-search">Search</a></li>
-                        </ul>
-                    </div>
+                    <p>Dashboard content can go here - Ferdie</p>
                 </div>
             </div>
 
@@ -58,7 +40,9 @@
             <div  id="about-page" data-role="page">
                 <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
-                    <h1>About App</h1>
+                    <a href="#second-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+
+                    <h1>About Me</h1>
                 </div>
                 <div data-role="content"  class="big-text">
                     <h2>Privacy Policy</h2>
@@ -78,7 +62,7 @@
 
         <script type="text/javascript">
            
-            $('#login-form').submit(function(event) {
+            $('#contact-form').submit(function(event) {
                 var formData = $('#login-form').serialize();
                 $.post('https://flagfitness.co.uk/api/login', formData, function(data) {
                     if (data == 'false'){
@@ -90,12 +74,6 @@
                     }
                 });
                 return false;
-            });
-
-            $('#due-page').click(function() {
-               $.get('https://flagfitness.co.uk/api/hi', function(data) {
-                    alert(data);
-                });
             });
             app.initialize();
         </script>
