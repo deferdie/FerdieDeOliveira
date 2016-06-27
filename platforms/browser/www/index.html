@@ -19,7 +19,7 @@
                         </div>
                     <div id="menu">
                         <a data-icon="flat-heart" data-theme="d" href="#second-page" data-role="button">Second Page</a>
-                        <a data-icon="flat-time" data-theme="f" href="#due-page"  data-role="button">Fake Btn</a>
+                        <a data-icon="flat-time" data-theme="f" href="#due-page" id="due-page"  data-role="button">Fake asdasdBtn</a>
                         <fieldset class="ui-grid-a">
                             <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
                             <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
@@ -108,6 +108,12 @@
         <script type="text/javascript" src="js/index.js"></script>
 
         <script type="text/javascript">
+           
+            $('#due-page').click(function() {
+               $.get('https://flagfitness.co.uk/api/hi', function(data) {
+                    alert(data);
+                });
+            });
             app.initialize();
         </script>
     </body>
